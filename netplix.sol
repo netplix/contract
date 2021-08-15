@@ -1,5 +1,5 @@
 /**
- *Submitted for verification at BscScan.com on 2021-08-11
+ *Submitted for verification at BscScan.com on 2021-07-19
 */
 
 pragma solidity ^0.6.12;
@@ -407,7 +407,7 @@ interface IUniswapV2Router02 is IUniswapV2Router01 {
 }
 
 
-contract THEADMEDIA is Context, IERC20, Ownable {
+contract NETPLIX is Context, IERC20, Ownable {
     using SafeMath for uint256;
     using Address for address;
 
@@ -425,14 +425,14 @@ contract THEADMEDIA is Context, IERC20, Ownable {
     uint256 private _rTotal = (MAX - (MAX % _tTotal));
     uint256 private _tFeeTotal;
 
-    string private _name = "THEAD.MEDIA";
-    string private _symbol = "AMD";
+    string private _name = "NETPLIX";
+    string private _symbol = "NETPLIX";
     uint8 private _decimals = 18;
     
     uint256 public _taxFee = 0;
     uint256 private _previousTaxFee = _taxFee;
     
-    uint256 public _liquidityFee = 10;
+    uint256 public _liquidityFee = 12;
     uint256 private _previousLiquidityFee = _liquidityFee;
 
     IUniswapV2Router02 public immutable uniswapV2Router;
@@ -441,8 +441,8 @@ contract THEADMEDIA is Context, IERC20, Ownable {
     bool inSwapAndLiquify;
     bool public swapAndLiquifyEnabled = true;
     
-    uint256 public _maxTxAmount = 1000000000 * 10**3 * 10**18;
-    uint256 private numTokensSellToAddToLiquidity = 500000 * 10**3 * 10**18;
+    uint256 public _maxTxAmount = 50000000000 * 10**3 * 10**18;
+    uint256 private numTokensSellToAddToLiquidity = 50000 * 10**3 * 10**18;
     
     event MinTokensBeforeSwapUpdated(uint256 minTokensBeforeSwap);
     event SwapAndLiquifyEnabledUpdated(bool enabled);
